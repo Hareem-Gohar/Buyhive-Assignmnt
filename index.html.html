@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>BuyHive</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ms-0">
+            <!-- Product Filter Section -->
+            <div class="col-lg-4 mt-4 d-lg-block d-none ms-0">
+                <div class="d-flex ">
+                    <p class="fs-5 lead fw-normal ms-0">Products</p>
+                    <p class="text-black-50 fs-5 ms-4">(657 Products)</p>
+                </div>
+                <div class="border border-1 p-4 pt-2 mb-4">
+                    <!-- Price -->
+                    <p class="mt-5 ms-2 fs-5">Price</p>
+                    <div class="d-flex justify-content-around">
+                        <div class="px-3 py-3 input-bg rounded-5 border border-1 d-flex justify-content-between w-50">
+                            <input type="text" placeholder="from"
+                                class="border-0 ms-2 border-outline w-50 p-0 bg-transparent">
+                            <span class="mt-1 me-3">$</span>
+                        </div>
+                        <span class="text-black-50 ms-1 me-1 mt-3"><i class="bi bi-dash-lg"></i></span>
+                        <div class="px-3 py-3 input-bg rounded-5 border border-1 d-flex justify-content-between w-50">
+                            <input type="text" placeholder="to"
+                                class="border-0 ms-2 border-outline w-25 p-0 bg-transparent">
+                            <span class="mt-1 me-3">$</span>
+                        </div>
+                    </div>
+                    <!-- MOQ -->
+                    <p class="mt-4 ms-2 fs-5">MOQ</p>
+                    <div class="px-3 py-3 input-bg border border-1 rounded-5 d-flex justify-content-between">
+                        <input type="text" placeholder="Less than"
+                            class="border-0 ms-2 border-outline  p-0 bg-transparent">
+                    </div>
+                    <!-- Product Certification -->
+                    <p class="mt-4 ms-2 fs-5">Product Certification</p>
+                    <div class="px-3 py-3 input-bg border border-1 rounded-5 d-flex justify-content-between">
+                        <input type="text" placeholder="Product  Certification"
+                            class="border-0 ms-2 border-outline p-0 bg-transparent w-75">
+                        <span class="mt-1 me-3"><i class="bi bi-search"></i></span>
+                    </div>
+                    <!-- Checkouts -->
+                    <div class=" mt-4 overflow-y-scroll mb-3  ms-2 fs-6 scroller lead">
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">ASTM</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">CE</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Certificate
+                            Compliance</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Certificate of
+                            Conformity</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">EN</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">EPA</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">FCC</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for=""> FDA</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for=""> GB</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Green Clean
+                            Certificate</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">ROHS</label>
+                    </div>
+                    <a href="" class="text-success">Show All(15)</a>
+
+                    <!-- Supplier Certification -->
+                    <p class="mt-4 ms-2 fs-5">Supplier Certification</p>
+                    <div class="px-3 py-3 input-bg border border-1 rounded-5 d-flex justify-content-between">
+                        <input type="text" placeholder="Supplier  Certification"
+                            class="border-0 ms-2 border-outline p-0 bg-transparent w-75">
+                        <span class="mt-1 me-3"><i class="bi bi-search"></i></span>
+                    </div>
+                    <!-- Checkouts -->
+                    <div class=" mt-4 mb-3  ms-2 fs-6  lead">
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">DUNS</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">DRS</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for=""> ISO 2001</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">ISO 2001:11</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">ISO 20:001</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">ISO 09001</label><br>
+                    </div>
+                    <!--  Manufacturer Location -->
+                    <p class="mt-4 ms-2 fs-5">Manufacturer Location </p>
+                    <div class="px-3 py-3 input-bg border border-1 rounded-5 d-flex justify-content-between">
+                        <input type="text" placeholder=" Country Location"
+                            class="border-0 ms-2 border-outline p-0 bg-transparent w-75">
+                        <span class="mt-1 me-3"><i class="bi bi-search"></i></span>
+                    </div>
+                    <!-- Checkouts -->
+                    <div class=" mt-4 overflow-y-scroll mb-3  ms-2 fs-6 scroller lead">
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Australia</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Canada</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Itlay</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Finland</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Korea</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Japan</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">Pakistan</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for=""> Afghanistan</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for=""> UAE</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for=""> India</label><br>
+                        <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for="">China</label>
+                    </div>
+                    <a href="" class="text-success">Show All(15)</a>
+                    <!--Stock Availibity  -->
+                    <p class="mt-4 ms-2 fs-5">Stock Availibity</p>
+                    <input type="checkbox" name="" id=""><label class="ms-3 mb-2" for=""><img
+                            src="/Assets/flat-design-grunge-american-flag-background_23-2149403292.avif"
+                            class="img-fluid me-3" width="40vw" alt=""> Australia</label><br>
+                </div>
+
+
+            </div>
+            <!-- Product Section -->
+            <div class="col-lg-8 col-md-12">
+                <div class=" mt-5 ms-3 d-flex justify-content-between">
+                    <!-- buy -->
+                    <div class=" mt-3 d-flex flex-column">
+                        <a href="#" class=" d-md-block d-none me-md-2 text-black-50 fs-5 text-decoration-none">Buy</a>
+                    </div>
+                    <!-- Promo -->
+                    <div class=" text-center fs-5 px-5 py-2 rounded-3  text-white gradient-bg">
+                        <p class="mb-0">Placing bulk orders on BuyHive is safe & easy.</p>
+                        <a href="#" class="text-decoration-none text-white fw-bold">Click to learn how it works!</a>
+                    </div>
+                </div>
+                <div class=" d-flex  justify-content-between">
+                    <!-- buttons -->
+                    <div class="mt-5 d-md-block d-none">
+                        <button class="btn border-0 fs-3 "><i class="bi bi-menu-button"></i></button>
+                        <button class="btn border-0 fs-3 "><i class="bi bi-ui-checks-grid"></i></i></button>
+                    </div>
+                    <!-- Dropdown -->
+                    <div class="mt-5">
+                        <div class=" d-flex">
+                            <div class=" input-bg p-2 rounded-4 px-5">
+                                <span class="mt-2 ">
+                                    <select name="" class=" bg-transparent border-0 p-2 border-outline" id="">
+                                        <option class="" value="">Relevance</option>
+                                        <option value="">Latest</option>
+                                        <option value="">Low Price</option>
+                                        <option value="">High Price</option>
+                                    </select></span>
+                            </div>
+                            <!-- prev/Next -->
+                            <div class="d-md-flex d-none">
+                                <div class="ms-3 mt-1  rounded-5">
+                                    <span class="input-bg  p-3 mt-1 rounded-5"><i
+                                            class="bi bi-chevron-left fw-bold fs-4 mt-3 p-2 "></i></span>
+                                </div>
+                                <div class="mt-3 ms-3 ">
+                                    <span class="input-bg me-2  mt-2 px-4 py-3 fs-6 rounded-5 ">1</span>of 22
+                                </div>
+                                <div class="ms-3 mt-1  rounded-5">
+                                    <span class="input-bg  p-3 mt-1 rounded-5"><i
+                                            class="bi bi-chevron-right fw-bold fs-4 mt-3 p-2 "></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Cards -->
+                <div class="row justify-content-between row-cols-lg-3 row-cols-md-2 row-cols-1 mt-5 ">
+                    <!-- 1st Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid" src="/Assets/Asset1.png" alt="">
+                            <div class="card-body">
+                                <small><img width="30wv" src="Assets/flag.avif" alt=""><span class="ps-2" style="font-size: 13px;">Stock in
+                                        USA</span></small>
+                                        <p class="fw-medium mt-3 mb-1">Rolhei 75% Ethanol Wet Wipe-100 Co...</p>
+                                        <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                        <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                        <button  class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid" src="/Assets/Asset2.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-5">ARCTICA 3-Layer Washable Face Mask...</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-4" src="/Assets/Asset3.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-5">ARCTICA 3-Layer Washable Face Mask...</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset4.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Rolhei Kid's mask - 50 count box</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:151782 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.00 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset5.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Rolhei Kid's mask - 50 count box</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:151782 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.00 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset6.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Daily Long Lasting Antibacterial Mist 500ml</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset7.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Beeswax Food Wrap Reusable Storage</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8th Card -->
+                    <div class="col mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/dglove.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Beeswax Food Wrap Reusable Storage</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 9th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid" src="/Assets/Asset1.png" alt="">
+                            <div class="card-body">
+                                <small><img width="30wv" src="Assets/flag.avif" alt=""><span class="ps-2" style="font-size: 13px;">Stock in
+                                        USA</span></small>
+                                <p class="fw-medium mt-3 mb-1">Rolhei 75% Ethanol Wet Wipe-100 Co...</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 10th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid" src="/Assets/Asset2.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-5">ARCTICA 3-Layer Washable Face Mask...</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 11th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-4" src="/Assets/Asset3.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-5">ARCTICA 3-Layer Washable Face Mask...</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 12th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset4.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Rolhei Kid's mask - 50 count box</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:151782 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.00 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 13th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset5.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Rolhei Kid's mask - 50 count box</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:151782 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.00 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 14th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset6.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Daily Long Lasting Antibacterial Mist 500ml</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 15th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset7.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Beeswax Food Wrap Reusable Storage</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 16th Card -->
+                    <div class="col mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/dglove.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Beeswax Food Wrap Reusable Storage</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- 17th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid" src="/Assets/Asset1.png" alt="">
+                            <div class="card-body">
+                                <small><img width="30wv" src="Assets/flag.avif" alt=""><span class="ps-2" style="font-size: 13px;">Stock in
+                                        USA</span></small>
+                                        <p class="fw-medium mt-3 mb-1">Rolhei 75% Ethanol Wet Wipe-100 Co...</p>
+                                        <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                        <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                        <button  class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 18th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid" src="/Assets/Asset2.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-5">ARCTICA 3-Layer Washable Face Mask...</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 19th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-4" src="/Assets/Asset3.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-5">ARCTICA 3-Layer Washable Face Mask...</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:1512 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.40 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 20th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset4.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Rolhei Kid's mask - 50 count box</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:151782 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.00 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 21th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset5.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Rolhei Kid's mask - 50 count box</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:151782 Pieces</p>
+                                <p class="fw-bold mt-2">$ 1.00 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 22th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset6.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Daily Long Lasting Antibacterial Mist 500ml</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 23th Card -->
+                    <div class="col  mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/Asset7.jpg" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Beeswax Food Wrap Reusable Storage</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 25th Card -->
+                    <div class="col mt-2 mb-5">
+                        <div class="card border-0 p-2 card-hover">
+                            <img class="card-img-top img-card img-fluid mb-1" src="/Assets/dglove.png" alt="">
+                            <div class="card-body">
+                                <p class="fw-medium mt-3 mb-1 mt-1">Beeswax Food Wrap Reusable Storage</p>
+                                <p class="text-black-50 small mt-0 mb-0">MOQ:500 Piecess</p>
+                                <p class="fw-bold mt-2">$ 1.90 / Piece</p>
+                                <button class="btn btn-info btn-hover text-white w-100 fw-bold">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
